@@ -1,0 +1,192 @@
+/* --- General Dashboard Container --- */
+.dashboard-container {
+  display: flex;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* --- Left Panel: Contacts --- */
+.left-panel {
+  width: 30%;
+  padding: 15px;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.left-panel h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#searchBox {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-card:hover {
+  background-color: #eff6ff;
+}
+
+/* --- Right Panel --- */
+.right-panel {
+  width: 70%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* --- Entity Counts at Top Left --- */
+.entity-counts-section {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.entity-counts-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.entity-counts-section li {
+  padding: 4px 0;
+}
+
+/* --- Chart Section --- */
+.chart-section {
+  margin-top: 80px; /* leave space for counts */
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e7eb;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.chart-controls select,
+.chart-controls button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.chart-controls button.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+
+.chart-wrapper {
+  height: 400px; /* increased chart height */
+  width: 100%;
+}
+
+/* --- Tabs Section --- */
+.tabs-section {
+  margin-top: 20px;
+}
+
+.tabs-header {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  transition: 0.2s;
+}
+
+.tab.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+
+.tab-content {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e7eb;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* --- Table and List --- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f3f4f6;
+}
+
+.no-data {
+  color: #6b7280;
+  padding: 10px 0;
+}
+
+/* --- Scrollbars --- */
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 3px;
+}
